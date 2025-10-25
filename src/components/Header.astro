@@ -1,11 +1,13 @@
 ---
 import LanguageSwitcher from "@/components/LanguageSwitcher.astro";
-
+import Logo from "@/assets/Logo-Tu-Web-Accesible.svg";
 ---
 
 <header class="">
     <div class="bg-black p-2 flex justify-end">
         <LanguageSwitcher />
     </div>
-    <div></div>
+    <div >
+        <img src={Logo.src} alt="Logo" />
+    </div>
 </header>
