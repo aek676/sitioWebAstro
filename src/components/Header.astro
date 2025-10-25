@@ -3,11 +3,123 @@ import LanguageSwitcher from "@/components/LanguageSwitcher.astro";
 import Logo from "@/assets/Logo-Tu-Web-Accesible.svg";
 ---
 
-<header class="">
+<header class="relative z-50">
     <div class="bg-black p-2 flex justify-end">
         <LanguageSwitcher />
     </div>
-    <div >
-        <img src={Logo.src} alt="Logo" />
+    <div class="flex items-center justify-between p-6 relative bg-white">
+        <div class="logo">
+            <img src={Logo.src} alt="Logo" class="w-[154px] h-[35px]" />
+        </div>
+
+        <input type="checkbox" id="menu-toggle" class="hidden peer" />
+
+        <label for="menu-toggle" class="cursor-pointer z-50 relative">
+            <span class="sr-only">Abrir menú</span>
+            <div
+                class="hamburger-icon w-10 h-10 flex items-center justify-center relative"
+            >
+                <span
+                    class="hamburger-line block w-8 h-[3px] bg-gray-800 rounded transition-all duration-300 absolute"
+                ></span>
+                <span
+                    class="hamburger-line block w-8 h-[3px] bg-gray-800 rounded transition-all duration-300 absolute"
+                ></span>
+                <span
+                    class="hamburger-line block w-8 h-[3px] bg-gray-800 rounded transition-all duration-300 absolute"
+                ></span>
+            </div>
+        </label>
+
+        <!-- Overlay para cerrar el menú al hacer clic fuera -->
+        <label
+            for="menu-toggle"
+            class="fixed inset-0 bg-opacity-50 opacity-0 invisible peer-checked:opacity-100 peer-checked:visible transition-all duration-500 z-30 cursor-pointer"
+        ></label>
+
+        <nav
+            class="fixed top-0 right-0
+            bg-black
+            w-80 h-screen
+            flex items-start justify-start
+            translate-x-full
+            peer-checked:translate-x-0
+            transition-transform duration-500 ease-in-out
+            z-40
+            pt-32 px-8"
+        >
+            <ul class="flex flex-col w-full gap-0">
+                <li class="border-b border-gray-700">
+                    <a
+                        href="/sobre-nosotros"
+                        class="block text-white text-xl font-normal py-5 hover:bg-gray-900 transition-colors duration-300"
+                    >
+                        SOBRE NOSOTROS
+                    </a>
+                </li>
+                <li class="border-b border-gray-700">
+                    <a
+                        href="/blog"
+                        class="block text-white text-xl font-normal py-5 hover:bg-gray-900 transition-colors duration-300"
+                    >
+                        BLOG
+                    </a>
+                </li>
+                <li class="border-b border-gray-700">
+                    <a
+                        href="/contacto"
+                        class="block text-white text-xl font-normal py-5 hover:bg-gray-900 transition-colors duration-300"
+                    >
+                        CONTACTO
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </div>
 </header>
+
+<style>
+    /* Clase para lectores de pantalla */
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+    }
+
+    /* Posición inicial de las líneas de la hamburguesa */
+    .hamburger-line:nth-child(1) {
+        top: 25%;
+    }
+
+    .hamburger-line:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .hamburger-line:nth-child(3) {
+        bottom: 25%;
+    }
+
+    /* Animación del botón hamburguesa a X */
+    #menu-toggle:checked ~ label .hamburger-line:nth-child(1) {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        background-color: white;
+    }
+
+    #menu-toggle:checked ~ label .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked ~ label .hamburger-line:nth-child(3) {
+        bottom: 50%;
+        transform: translateY(50%) rotate(-45deg);
+        background-color: white;
+    }
+</style>
