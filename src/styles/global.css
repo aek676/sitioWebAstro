@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+footer h2 {
+    padding-bottom: 20px;
+}
+
+footer li {
+    padding-bottom: 10px;
+}
