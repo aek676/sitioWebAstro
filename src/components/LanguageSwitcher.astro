@@ -1,0 +1,45 @@
+---
+const langs = ["Español", "English", "Catalá"];
+const currentLang = "Español";
+---
+
+<div class="relative inline-block text-left">
+    <button
+        class="flex items-center gap-2 bg-transparent text-white border-none px-4 py-2 text-lg cursor-pointer font-normal"
+        id="langToggle"
+    >
+        {currentLang}
+        <span class="text-xs transition-transform duration-200" id="arrow">
+            ▼
+        </span>
+    </button>
+    <div
+        class="absolute left-0 top-full flex flex-col bg-black max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out w-fit"
+        id="langMenu"
+    >
+        {
+            langs
+                .filter((lang) => lang !== currentLang)
+                .map((lang) => (
+                    <button class="bg-transparent text-white border-none px-4 py-2 text-lg cursor-pointer text-left font-normal hover:bg-white/10 whitespace-nowrap">
+                        {lang}
+                    </button>
+                ))
+        }
+    </div>
+</div>
+
+<script>
+    const toggleButton = document.getElementById("langToggle");
+    const menu = document.getElementById("langMenu");
+
+    toggleButton?.addEventListener("click", () => {
+        if (menu?.classList.contains("max-h-0")) {
+            menu?.classList.remove("max-h-0");
+            menu?.classList.add("max-h-[200px]");
+        } else {
+            menu?.classList.remove("max-h-[200px]");
+            menu?.classList.add("max-h-0");
+        }
+    });
+</script>
