@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-    --color-lavanda: #e0d5fd;
+    --color-lavanda-100: #e0d5fd;
+    --color-lavanda-700: #E28CDB;
 }
+
 
 body {
     @apply bg-white flex-col min-h-screen font-[Arial];
@@ -25,5 +27,5 @@ footer li {
 }
 
 .social-media-footer {
-    @apply flex justify-start border-1 p-3 w-45 hover:bg-lavanda hover:text-black font-bold text-xs;
+    @apply flex justify-start border-1 p-3 w-45 hover:bg-lavanda-100 hover:text-black font-bold text-xs;
 }

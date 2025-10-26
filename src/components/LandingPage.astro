@@ -10,6 +10,7 @@ import Auditoria from "@/assets/images/AccessibilityCard/Auditoria.svg";
 import DisenoWeb from "@/assets/images/AccessibilityCard/Diseno-web.svg";
 import AccesibilidadAplicacionesMoviles from "@/assets/images/AccessibilityCard/Accesibilidad-Aplicaciones-Moviles.svg";
 import DocumentosPDFAccesibles from "@/assets/images/AccessibilityCard/Documentos-y-PDFs-Accesibles.svg";
+import HerramientaDeValidacionAccesibilidad from "@/assets/images/Herramienta-de-validacion-accesibilidad-web.webp";
 ---
 
 <div>
@@ -32,7 +33,7 @@ import DocumentosPDFAccesibles from "@/assets/images/AccessibilityCard/Documento
     bg-white
     border-2 border-transparent
     transition-colors
-    hover:bg-lavanda hover:border-black
+    hover:bg-lavanda-100 hover:border-black
     w-fit whitespace-nowrap"
         >
             <span>Infórmate</span>
@@ -71,7 +72,7 @@ import DocumentosPDFAccesibles from "@/assets/images/AccessibilityCard/Documento
     bg-white
     border-2 border-transparent
     transition-colors
-    hover:bg-lavanda hover:border-black
+    hover:bg-lavanda-100 hover:border-black
     w-fit whitespace-nowrap"
         >
             <span>Infórmate</span>
@@ -138,5 +139,22 @@ import DocumentosPDFAccesibles from "@/assets/images/AccessibilityCard/Documento
         />
     </div>
 
-    <div></div>
+    <div class="flex flex-col gap-8 px-8 py-12 bg-black text-white text-3xl">
+        <Image
+            src={HerramientaDeValidacionAccesibilidad}
+            alt="Herramienta de validación accesibilidad web"
+        />
+        <h2 class="font-bold">
+            Validador de <span class="text-lavanda-700">Accesibilidad Web</span>
+        </h2>
+        <div class="max-w-md flex flex-col gap-2">
+            <h3 class="font-bold">
+                Obtén una Auditoría gratuita de tu portal web
+            </h3>
+            <p class="text-lg leading-7">
+                Para poder enviarte el resultado de tu auditoría gratuita,
+                necesitaremos tener tu email.
+            </p>
+        </div>
+    </div>
 </div>
