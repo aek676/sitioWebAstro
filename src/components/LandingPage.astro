@@ -1,8 +1,140 @@
 ---
 import Hero from "@/sections/Hero.astro";
+import { Image } from "astro:assets";
+import WeAllWebLogotipoBlack from "@/images/We-all-web-logotipo-black.webp";
+import IconosAccesibilidad from "@/images/iconos-de-accesibilidad-350x77.webp";
+import AccessibilityCard from "./AccessibilityCard.astro";
+import ConsultoriaAccesibilidadWeb from "@/images/AccessibilityCard/Consultoria-Accesibilidad-Web.svg";
+import LogoWeAllWeb from "@/images/AccessibilityCard/Logo-we-all-web.svg";
+import Auditoria from "@/images/AccessibilityCard/Auditoria.svg";
+import DisenoWeb from "@/images/AccessibilityCard/Diseno-web.svg";
+import AccesibilidadAplicacionesMoviles from "@/images/AccessibilityCard/Accesibilidad-Aplicaciones-Moviles.svg";
+import DocumentosPDFAccesibles from "@/images/AccessibilityCard/Documentos-y-PDFs-Accesibles.svg";
 ---
 
 <div>
     <Hero />
+    <div class="flex flex-col bg-lavanda gap-4 px-8 py-12">
+        <Image
+            src={WeAllWebLogotipoBlack}
+            alt="We All Web Logotipo Black"
+            width={160}
+            height={170}
+        />
+        <span class="text-3xl font-bold"
+            >La mejor herramienta para mejorar la accesibilidad</span
+        >
+        <a
+            href="#"
+            class="flex flex-row items-center justify-between gap-4
+    px-4 py-0.5
+    font-bold uppercase tracking-wide
+    bg-white
+    border-2 border-transparent
+    transition-colors
+    hover:bg-lavanda hover:border-black
+    w-fit whitespace-nowrap"
+        >
+            <span>Infórmate</span>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 25 25"
+                class="w-5 h-5"
+                ><path
+                    style="fill:#232326"
+                    d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                    data-name="Right"></path></svg
+            >
+        </a>
+    </div>
+
+    <div class="flex flex-col gap-4 px-8 py-12 bg-black">
+        <Image
+            src={IconosAccesibilidad}
+            alt="Iconos de accesibilidad"
+            width={350}
+            height={77}
+        />
+        <span class="text-3xl text-white font-bold">
+            Cumplimiento Nomativo
+        </span>
+        <div class="text-xl text-white">
+            <a href="#">UNE-EN 301549:2022; RD 1112/2018</a>,
+            <a href="#">ADA; Sección 508</a>
+        </div>
+
+        <a
+            href="#"
+            class="flex flex-row items-center justify-between gap-4
+    px-4 py-0.5
+    font-bold uppercase tracking-wide
+    bg-white
+    border-2 border-transparent
+    transition-colors
+    hover:bg-lavanda hover:border-black
+    w-fit whitespace-nowrap"
+        >
+            <span>Infórmate</span>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 25 25"
+                class="w-5 h-5"
+                ><path
+                    style="fill:#232326"
+                    d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                    data-name="Right"></path></svg
+            >
+        </a>
+    </div>
+
+    <div class="flex flex-col gap-8 px-8 py-12">
+        <div class="flex flex-col gap-8">
+            <h2 class="text-3xl font-bold">
+                Soluciones de Accesibilidad Digital
+            </h2>
+            <p class="text-lg">
+                Te damos la bienvenida a Tu Web Accesible, el equipo en el que
+                puedes confiar para dotar a tus productos y plataformas de una
+                experiencia de usuario inclusiva. Te ofrecemos consultoría,
+                diseño, auditorías y soluciones tecnológicas para hacer tu web y
+                contenido digital plenamente accesible a todas las personas.
+            </p>
+        </div>
+        <AccessibilityCard
+            title="Auditoría de Accesibilidad Web"
+            text="Evaluamos tu web o comercio electrónico para identificar y solucionar cualquier barrera de accesibilidad."
+            img={ConsultoriaAccesibilidadWeb}
+            imgAlt="Logo de Tu Web Accesible"
+        />
+        <AccessibilityCard
+            title="Herramientas de Accesibilidad"
+            text="Incorpora la mejor tecnología de IA para hacer que tu web o e-commerce sea más inclusiva para todas las personas."
+            img={LogoWeAllWeb}
+            imgAlt="Logo de Tu Web Accesible"
+        />
+        <AccessibilityCard
+            title="Accesibilidad para eCommerce"
+            text="Ofrecemos asesoramiento experto para garantizar que tu eCommerce cumpla con todas las normativas vigentes."
+            img={Auditoria}
+            imgAlt="Auditoría"
+        />
+        <AccessibilityCard
+            title="Diseño Web Accesible"
+            text="Diseñamos webs actuales, de navegabilidad intuitiva, para facilitar su uso."
+            img={DisenoWeb}
+            imgAlt="Diseño Web"
+        />
+        <AccessibilityCard
+            title="Accesibilidad para Aplicaciones Móviles"
+            text="Aseguramos que tus aplicaciones móviles sean accesibles para usuarios con diversas capacidades."
+            img={AccesibilidadAplicacionesMoviles}
+            imgAlt="Accesibilidad para Aplicaciones Móviles"
+        />
+        <AccessibilityCard
+            title="Accesibilidad documental"
+            text="Transformamos tus documentos PDF en formatos accesibles y sencillos de comprender por todas las personas."
+            img={DocumentosPDFAccesibles}
+            imgAlt="Documentos y PDFs Accesibles"
+        />
+    </div>
 </div>
-<h1>Hola</h1>
