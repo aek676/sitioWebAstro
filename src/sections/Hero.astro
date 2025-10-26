@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+import QuieresHacerTuWebMasAcceible from "@/images/Quieres-hacer-tu-web-mas-acceible.webp";
+---
+
+<div class="flex flex-col md:flex-row items-center p-8 gap-4">
+    <div class="flex flex-col gap-6 max-w-lg">
+        <h1 class="text-4xl font-bold">Accesiblidad Digital</h1>
+        <p class="text-2xl font-bold leading-none">
+            Tu web, eCommerce, app y documentos, ya pueden ser ACCESIBLES
+        </p>
+        <a
+            href="/tu-enlace"
+            class="flex flex-row items-center justify-between gap-4
+    border-2 border-black
+    px-6 py-1
+    text-sm font-bold text-black uppercase tracking-wide
+    transition-colors
+    hover:bg-lavanda w-fit whitespace-nowrap"
+        >
+            <span>Comienza ya</span>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 25 25"
+                class="w-5 h-5"
+                ><path
+                    style="fill:#232326"
+                    d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                    data-name="Right"></path></svg
+            >
+        </a>
+    </div>
+    <Image
+        src={QuieresHacerTuWebMasAcceible}
+        alt="Quieres hacer tu web más accesible"
+    />
+</div>

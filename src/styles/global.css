@@ -1,9 +1,29 @@
 @import "tailwindcss";
 
+@theme {
+    --color-lavanda: #e0d5fd;
+}
+
+body {
+    @apply bg-white flex-col min-h-screen font-[Arial];
+}
+
+footer {
+    @apply text-base font-[Arial];
+}
+
+footer>* {
+    @apply p-10;
+}
+
 footer h2 {
-    padding-bottom: 20px;
+    @apply pb-4 font-bold;
 }
 
 footer li {
     padding-bottom: 10px;
+}
+
+.social-media-footer {
+    @apply flex justify-start border-1 p-3 w-45 hover:bg-lavanda hover:text-black font-bold text-xs;
 }

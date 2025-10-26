@@ -5,9 +5,9 @@ import Sello from "@/assets/sello-accesibilidad.webp";
 import iso9001 from "@/assets/iso-9001-tuwebaccesible.png";
 ---
 
-<footer class="pt-10 bg-black text-white footer-fade-in">
-    <div class="px-6 pb-4 flex flex-col gap-6">
-        <div>
+<footer class="bg-black text-white footer-fade-in">
+    <div class="flex flex-col gap-9">
+        <div class="space-y-8">
             <img
                 src={Logo.src}
                 alt="Logo de Tu Web Accesible"
@@ -16,11 +16,11 @@ import iso9001 from "@/assets/iso-9001-tuwebaccesible.png";
             <img
                 src={MadeInEurope.src}
                 alt="Made in Europe"
-                class="w-[127px] h-[117px] self-end md:self-center"
+                class="w-[173px] h-[77px] self-end md:self-center"
             />
         </div>
         <div>
-            <h2 class="font-bold">MAPA WEB</h2>
+            <h2>MAPA WEB</h2>
             <ul>
                 <li><a href="#">Consultoría</a></li>
                 <li><a href="#">Auditoría - Web</a></li>
@@ -33,7 +33,7 @@ import iso9001 from "@/assets/iso-9001-tuwebaccesible.png";
             </ul>
         </div>
         <div>
-            <h2 class="font-bold">CONTACTO</h2>
+            <h2>CONTACTO</h2>
             <p>
                 Contacta con nuestro equipo de Accesibilidad Web para obtener la
                 información completa y personalizada que necesitas.
@@ -44,23 +44,39 @@ import iso9001 from "@/assets/iso-9001-tuwebaccesible.png";
             <p>TEL.: 689 681 486</p>
             <p>TEL.: 910 917 377</p>
         </div>
-        <div>
-            <h2 class="font-bold">REDES SOCIALES</h2>
+        <div class="space-y-4">
+            <h2>REDES SOCIALES</h2>
             <p>Acompánanos en las redes</p>
-            <ul class="uppercase">
-                <li class="flex border-2 p-4 justify-start w-fit">
+            <ul class="uppercase space-y-4">
+                <li class="social-media-footer">
                     <a href="#">Facebook</a>
                 </li>
-                <li><a href="#">LinkedIn</a></li>
-                <li><a href="#">SPOTIFY</a></li>
-                <li><a href="#">Instagram</a></li>
+                <li class="social-media-footer">
+                    <a href="#">LinkedIn</a>
+                </li>
+                <li class="social-media-footer">
+                    <a href="#">Spotify</a>
+                </li>
+                <li class="social-media-footer">
+                    <a href="#">Instagram</a>
+                </li>
             </ul>
         </div>
+        <div class="flex flex-row space-x-4">
+            <img src={Sello.src} alt="Sello de Accesibilidad" />
+            <img src={iso9001.src} alt="ISO 9001" />
+        </div>
     </div>
-    <div class="w-full bg-white text-black py-4 px-6">
-        <p>Aviso legal</p>
-        <p>Política de cookies</p>
-        <p>Política de privacidad</p>
-        <p>Declaración de Accesibilidad</p>
+    <div class="w-full bg-white text-black space-y-4">
+        <div class="space-y-4">
+            <p>Aviso legal</p>
+            <p>Política de cookies</p>
+            <p>Política de privacidad</p>
+            <p>Declaración de Accesibilidad</p>
+        </div>
+        <hr />
+        <p>
+            Tu Web Accesible es una marca de <a href="#">Taller Agencia</a>
+        </p>
     </div>
 </footer>
