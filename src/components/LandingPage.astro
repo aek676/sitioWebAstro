@@ -11,6 +11,8 @@ import DisenoWeb from "@/assets/images/AccessibilityCard/Diseno-web.svg";
 import AccesibilidadAplicacionesMoviles from "@/assets/images/AccessibilityCard/Accesibilidad-Aplicaciones-Moviles.svg";
 import DocumentosPDFAccesibles from "@/assets/images/AccessibilityCard/Documentos-y-PDFs-Accesibles.svg";
 import HerramientaDeValidacionAccesibilidad from "@/assets/images/Herramienta-de-validacion-accesibilidad-web.webp";
+
+import QuienEstaObligado from "@/assets/images/Quien-Esta-Obligado.webp";
 ---
 
 <div>
@@ -156,5 +158,45 @@ import HerramientaDeValidacionAccesibilidad from "@/assets/images/Herramienta-de
                 necesitaremos tener tu email.
             </p>
         </div>
+    </div>
+
+    <div class="flex flex-col gap-8 px-8 py-12 text-3xl">
+        <div>
+            <h2 class="font-bold">Normativas de accesibilidad</h2>
+            <div class="text-lg">
+                <a class="hover:text-lavanda-900" href="#">
+                    UNE-EN 301549:2022; RD 1112/2018
+                </a>,
+                <a class="hover:text-lavanda-900" href="#">
+                    ADA; Sección 508
+                </a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 text-lg">
+            <h3>¿Quién está obligado?</h3>
+            <ul class="list-disc list-inside font-bold px-6">
+                <li>Administraciones Públicas</li>
+                <li>KIT Digital - Agentes Digitalizadores</li>
+                <li>Universidades</li>
+                <li>Bancos y Cajas</li>
+                <li>Retailers y E-Commerce</li>
+                <li>Aseguradoras</li>
+                <li>Farmacéuticas</li>
+            </ul>
+        </div>
+
+        <Image src={QuienEstaObligado} alt="¿Quién está obligado?" />
+    </div>
+
+    <div class="flex flex-col gap-4 px-8 py-12 bg-[#F7F7F7] text-3xl">
+        <h2 class="font-bold">¿Qué es la accesibilidad digital?</h2>
+        <p class="text-lg">
+            La accesibilidad digital es un nuevo reto cuyo principal objetivo se
+            centra en garantizar que todos los usuarios, independientemente de
+            sus capacidades, puedan navegar y utilizar las páginas web,
+            aplicaciones móviles y productos digitales de forma efectiva,
+            cumpliendo además con las leyes vigentes en la normativa nacional y
+            europea.
+        </p>
     </div>
 </div>
