@@ -17,7 +17,7 @@ import QuienEstaObligado from "@/assets/images/Quien-Esta-Obligado.webp";
 
 <div>
     <Hero />
-    <div class="flex flex-col bg-lavanda gap-4 px-8 py-12">
+    <div class="flex flex-col bg-lavanda-100 gap-4 px-8 py-12">
         <Image
             src={WeAllWebLogotipoBlack}
             alt="We All Web Logotipo Black"
@@ -188,7 +188,7 @@ import QuienEstaObligado from "@/assets/images/Quien-Esta-Obligado.webp";
         <Image src={QuienEstaObligado} alt="¿Quién está obligado?" />
     </div>
 
-    <div class="flex flex-col gap-4 px-8 py-12 bg-[#F7F7F7] text-3xl">
+    <div class="flex flex-col gap-8 px-8 py-12 bg-[#F7F7F7] text-3xl">
         <h2 class="font-bold">¿Qué es la accesibilidad digital?</h2>
         <p class="text-lg">
             La accesibilidad digital es un nuevo reto cuyo principal objetivo se
@@ -198,5 +198,23 @@ import QuienEstaObligado from "@/assets/images/Quien-Esta-Obligado.webp";
             cumpliendo además con las leyes vigentes en la normativa nacional y
             europea.
         </p>
+        <AccessibilityCard
+            title="Amplía tu Mercado"
+            text="Accede a un público más amplio mejorando la accesibilidad de tus plataformas."
+            img={ConsultoriaAccesibilidadWeb}
+            imgAlt="Icono amplia tu mercado"
+        />
+        <AccessibilityCard
+            title="Eficiencia y Ahorro"
+            text="Optimiza tus recursos digitales para hacerlos más eficientes y así reducir costes operativos."
+            img={ConsultoriaAccesibilidadWeb}
+            imgAlt="Icono eficiencia y ahorro"
+        />
+        <AccessibilityCard
+            title="Compromiso Social"
+            text="Demuestra tu compromiso con la inclusión eliminando la temida brecha digital."
+            img={ConsultoriaAccesibilidadWeb}
+            imgAlt="Icono compromiso social"
+        />
     </div>
 </div>
