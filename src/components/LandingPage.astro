@@ -119,62 +119,135 @@ import { CarouselWrapper } from "./CarouselWrapper";
                 necesitaremos tener tu email.
             </p>
         </div>
-    </div>
-
-    <div class="page-content text-3xl">
-        <div>
-            <h2 class="font-bold">Normativas de accesibilidad</h2>
-            <div class="text-lg">
-                <a class="hover:text-lavanda-900" href="#"
-                    >UNE-EN 301549:2022; RD 1112/2018</a
-                ><span>, </span><a class="hover:text-lavanda-900" href="#"
-                    >ADA; Sección 508</a
-                >
+        <form action="" method="post" class="flex flex-col text-lg gap-5">
+            <div class="flex flex-col gap-2">
+                <label for="input-email-oaw">Email*</label>
+                <input
+                    type="email"
+                    id="input-email-oaw"
+                    name="email"
+                    required
+                    class="border border-white px-4 py-3 focus:border-lavanda-900 focus:outline-none"
+                />
             </div>
-        </div>
-        <div class="flex flex-col gap-4 text-lg">
-            <h3>¿Quién está obligado?</h3>
-            <ul class="list-disc list-inside font-bold px-6">
-                <li>Administraciones Públicas</li>
-                <li>KIT Digital - Agentes Digitalizadores</li>
-                <li>Universidades</li>
-                <li>Bancos y Cajas</li>
-                <li>Retailers y E-Commerce</li>
-                <li>Aseguradoras</li>
-                <li>Farmacéuticas</li>
-            </ul>
-        </div>
+            <div class="flex flex-col gap-2">
+                <label for="url">Indicanos la URL*</label>
+                <input
+                    type="url"
+                    id="url"
+                    name="url"
+                    required
+                    class="border border-white px-4 py-3 focus:border-lavanda-900 focus:outline-none"
+                />
+            </div>
+            <label class="flex flex-row items-center gap-3">
+                <div class="relative shrink-0 w-7 h-5">
+                    <input
+                        type="checkbox"
+                        name="acceptance-oaw"
+                        id="checkbox-oaw"
+                        class="sr-only peer"
+                    />
 
-        <Image src={QuienEstaObligado} alt="¿Quién está obligado?" />
+                    <span
+                        class="w-7 h-5 inline-block rounded-none border border-white bg-transparent peer-checked:bg-gray-500 transition-colors"
+                        aria-hidden="true"></span>
+
+                    <!-- Icono check centrado sobre la casilla -->
+                    <svg
+                        class="hidden peer-checked:block absolute inset-0 m-auto w-4 h-3 text-white pointer-events-none"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M1 5L4.5 8L11 1"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+
+                <span class="wpcf7-list-item-label">
+                    He leído y acepto la <a href="/politica-privacidad/"
+                        >Política de Privacidad</a
+                    >
+                </span>
+            </label>
+        </form>
+        <button type="submit" class="btn-white text-lg"
+            ><span>Solicita tu informe</span>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path d="M18 8L22 12L18 16"></path><path d="M2 12H22"
+                ></path></svg
+            ></button
+        >
+    </div>
+</div>
+
+<div class="page-content text-3xl">
+    <div>
+        <h2 class="font-bold">Normativas de accesibilidad</h2>
+        <div class="text-lg">
+            <a class="hover:text-lavanda-900" href="#"
+                >UNE-EN 301549:2022; RD 1112/2018</a
+            ><span>, </span><a class="hover:text-lavanda-900" href="#"
+                >ADA; Sección 508</a
+            >
+        </div>
+    </div>
+    <div class="flex flex-col gap-4 text-lg">
+        <h3>¿Quién está obligado?</h3>
+        <ul class="list-disc list-inside font-bold px-6">
+            <li>Administraciones Públicas</li>
+            <li>KIT Digital - Agentes Digitalizadores</li>
+            <li>Universidades</li>
+            <li>Bancos y Cajas</li>
+            <li>Retailers y E-Commerce</li>
+            <li>Aseguradoras</li>
+            <li>Farmacéuticas</li>
+        </ul>
     </div>
 
-    <div class="page-content bg-[#F7F7F7] text-3xl">
-        <h2 class="font-bold">¿Qué es la accesibilidad digital?</h2>
-        <p class="text-lg">
-            La accesibilidad digital es un nuevo reto cuyo principal objetivo se
-            centra en garantizar que todos los usuarios, independientemente de
-            sus capacidades, puedan navegar y utilizar las páginas web,
-            aplicaciones móviles y productos digitales de forma efectiva,
-            cumpliendo además con las leyes vigentes en la normativa nacional y
-            europea.
-        </p>
-        <AccessibilityCard
-            title="Amplía tu Mercado"
-            text="Accede a un público más amplio mejorando la accesibilidad de tus plataformas."
-            img={ConsultoriaAccesibilidadWeb}
-            imgAlt="Icono amplia tu mercado"
-        />
-        <AccessibilityCard
-            title="Eficiencia y Ahorro"
-            text="Optimiza tus recursos digitales para hacerlos más eficientes y así reducir costes operativos."
-            img={ConsultoriaAccesibilidadWeb}
-            imgAlt="Icono eficiencia y ahorro"
-        />
-        <AccessibilityCard
-            title="Compromiso Social"
-            text="Demuestra tu compromiso con la inclusión eliminando la temida brecha digital."
-            img={ConsultoriaAccesibilidadWeb}
-            imgAlt="Icono compromiso social"
-        />
-    </div>
+    <Image src={QuienEstaObligado} alt="¿Quién está obligado?" />
+</div>
+
+<div class="page-content bg-[#F7F7F7] text-3xl">
+    <h2 class="font-bold">¿Qué es la accesibilidad digital?</h2>
+    <p class="text-lg">
+        La accesibilidad digital es un nuevo reto cuyo principal objetivo se
+        centra en garantizar que todos los usuarios, independientemente de sus
+        capacidades, puedan navegar y utilizar las páginas web, aplicaciones
+        móviles y productos digitales de forma efectiva, cumpliendo además con
+        las leyes vigentes en la normativa nacional y europea.
+    </p>
+    <AccessibilityCard
+        title="Amplía tu Mercado"
+        text="Accede a un público más amplio mejorando la accesibilidad de tus plataformas."
+        img={ConsultoriaAccesibilidadWeb}
+        imgAlt="Icono amplia tu mercado"
+    />
+    <AccessibilityCard
+        title="Eficiencia y Ahorro"
+        text="Optimiza tus recursos digitales para hacerlos más eficientes y así reducir costes operativos."
+        img={ConsultoriaAccesibilidadWeb}
+        imgAlt="Icono eficiencia y ahorro"
+    />
+    <AccessibilityCard
+        title="Compromiso Social"
+        text="Demuestra tu compromiso con la inclusión eliminando la temida brecha digital."
+        img={ConsultoriaAccesibilidadWeb}
+        imgAlt="Icono compromiso social"
+    />
 </div>
