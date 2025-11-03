@@ -6,10 +6,14 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel";
-import { ChevronLeft, ChevronRight, Triangle } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import Autoplay from 'embla-carousel-autoplay'
+import { useRef } from "react";
 
 export function CarouselWrapper() {
+    const plugin = useRef(
+        Autoplay({ delay: 20000, stopOnInteraction: true })
+    )
+
     const carouselItems = [
         {
             src: CarouselImages.AyuntamientoDeMutxamelLogo,
@@ -27,17 +31,21 @@ export function CarouselWrapper() {
     ];
 
     return (
-        <div className="px-20 py-8">
+        <div className="w-full p-8 flex justify-center items-center">
             <Carousel
+                plugins={[plugin.current]}
                 opts={{
                     align: "start",
                     loop: true,
                     slidesToScroll: 1,
                 }}
+                className="w-full max-w-xs"
+                onMouseEnter={plugin.current.stop}
+                onMouseLeave={plugin.current.reset}
             >
                 <CarouselContent className="ml-0">
                     {carouselItems.map((item, index) => (
-                        <CarouselItem key={item.alt || index} className="basis-1/2 pl-0">
+                        <CarouselItem key={item.alt || index} className="basis-1/2">
                             <img
                                 src={item.src.src}
                                 alt={item.alt}
