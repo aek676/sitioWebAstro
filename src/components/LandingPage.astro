@@ -16,6 +16,7 @@ import {
     AccesibilidadAplicacionesMoviles,
     DocumentosPDFAccesibles,
 } from "@/assets/images";
+import { CarouselWrapper } from "./CarouselWrapper";
 ---
 
 <div>
@@ -40,13 +41,15 @@ import {
             width={350}
             height={77}
         />
-        <p class="text-3xl font-bold">Cumplimiento Nomativo</p>
+        <p class="text-3xl font-bold">Cumplimiento Normativo</p>
         <div class="text-xl">
             <a href="#">UNE-EN 301549:2022; RD 1112/2018</a>,
             <a href="#">ADA; Sección 508</a>
         </div>
         <LightButton name="Infórmate" />
     </div>
+
+    <CarouselWrapper client:load />
 
     <div class="page-content">
         <div class="flex flex-col gap-8">

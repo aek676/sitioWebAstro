@@ -5,3 +5,4 @@ export { default as HerramientaDeValidacionAccesibilidad } from './Herramienta-d
 export { default as QuienEstaObligado } from './Quien-Esta-Obligado.webp';
 
 export * from './AccessibilityCard/index';
+export * from './Carousel/index';
