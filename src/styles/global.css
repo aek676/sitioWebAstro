@@ -7,6 +7,7 @@
 }
 
 
+
 body {
     @apply bg-white flex-col min-h-screen font-[Arial];
 }
@@ -28,5 +29,13 @@ footer li {
 }
 
 .social-media-footer {
-    @apply flex justify-start border-1 p-3 w-45 hover:bg-lavanda-100 hover:text-black font-bold text-xs;
+    @apply flex justify-start border p-3 w-45 hover:bg-lavanda-100 hover:text-black font-bold text-xs;
+}
+
+.page-content {
+    @apply flex flex-col gap-4 px-8 py-12;
+}
+
+.btn-white {
+    @apply flex flex-row items-center justify-start gap-4 w-fit px-4 py-0.5 font-bold uppercase transition-colors border-2 border-transparent bg-white text-black hover:bg-lavanda-100 hover:border-black
 }

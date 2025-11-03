@@ -13,84 +13,40 @@ import DocumentosPDFAccesibles from "@/assets/images/AccessibilityCard/Documento
 import HerramientaDeValidacionAccesibilidad from "@/assets/images/Herramienta-de-validacion-accesibilidad-web.webp";
 
 import QuienEstaObligado from "@/assets/images/Quien-Esta-Obligado.webp";
+import LightButton from "./LightButton.astro";
 ---
 
 <div>
     <Hero />
-    <div class="flex flex-col bg-lavanda-100 gap-4 px-8 py-12">
+    <div class="page-content bg-lavanda-100">
         <Image
             src={WeAllWebLogotipoBlack}
             alt="We All Web Logotipo Black"
             width={160}
             height={170}
         />
-        <span class="text-3xl font-bold"
-            >La mejor herramienta para mejorar la accesibilidad</span
-        >
-        <a
-            href="#"
-            class="flex flex-row items-center justify-between gap-4
-    px-4 py-0.5
-    font-bold uppercase tracking-wide
-    bg-white
-    border-2 border-transparent
-    transition-colors
-    hover:bg-lavanda-100 hover:border-black
-    w-fit whitespace-nowrap"
-        >
-            <span>Infórmate</span>
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 25 25"
-                class="w-5 h-5"
-                ><path
-                    style="fill:#232326"
-                    d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                    data-name="Right"></path></svg
-            >
-        </a>
+        <p class="text-3xl font-bold">
+            La mejor herramienta para mejorar la accesibilidad
+        </p>
+        <LightButton name="Infórmate" />
     </div>
 
-    <div class="flex flex-col gap-4 px-8 py-12 bg-black">
+    <div class="page-content bg-black text-white">
         <Image
             src={IconosAccesibilidad}
             alt="Iconos de accesibilidad"
             width={350}
             height={77}
         />
-        <span class="text-3xl text-white font-bold">
-            Cumplimiento Nomativo
-        </span>
-        <div class="text-xl text-white">
+        <p class="text-3xl font-bold">Cumplimiento Nomativo</p>
+        <div class="text-xl">
             <a href="#">UNE-EN 301549:2022; RD 1112/2018</a>,
             <a href="#">ADA; Sección 508</a>
         </div>
-
-        <a
-            href="#"
-            class="flex flex-row items-center justify-between gap-4
-    px-4 py-0.5
-    font-bold uppercase tracking-wide
-    bg-white
-    border-2 border-transparent
-    transition-colors
-    hover:bg-lavanda-100 hover:border-black
-    w-fit whitespace-nowrap"
-        >
-            <span>Infórmate</span>
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 25 25"
-                class="w-5 h-5"
-                ><path
-                    style="fill:#232326"
-                    d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                    data-name="Right"></path></svg
-            >
-        </a>
+        <LightButton name="Infórmate" />
     </div>
 
-    <div class="flex flex-col gap-8 px-8 py-12">
+    <div class="page-content">
         <div class="flex flex-col gap-8">
             <h2 class="text-3xl font-bold">
                 Soluciones de Accesibilidad Digital
@@ -141,7 +97,7 @@ import QuienEstaObligado from "@/assets/images/Quien-Esta-Obligado.webp";
         />
     </div>
 
-    <div class="flex flex-col gap-8 px-8 py-12 bg-black text-white text-3xl">
+    <div class="page-content bg-black text-white text-3xl">
         <Image
             src={HerramientaDeValidacionAccesibilidad}
             alt="Herramienta de validación accesibilidad web"
@@ -149,7 +105,7 @@ import QuienEstaObligado from "@/assets/images/Quien-Esta-Obligado.webp";
         <h2 class="font-bold">
             Validador de <span class="text-lavanda-700">Accesibilidad Web</span>
         </h2>
-        <div class="max-w-md flex flex-col gap-2">
+        <div class="flex flex-col gap-2">
             <h3 class="font-bold">
                 Obtén una Auditoría gratuita de tu portal web
             </h3>
@@ -160,16 +116,15 @@ import QuienEstaObligado from "@/assets/images/Quien-Esta-Obligado.webp";
         </div>
     </div>
 
-    <div class="flex flex-col gap-8 px-8 py-12 text-3xl">
+    <div class="page-content text-3xl">
         <div>
             <h2 class="font-bold">Normativas de accesibilidad</h2>
             <div class="text-lg">
-                <a class="hover:text-lavanda-900" href="#">
-                    UNE-EN 301549:2022; RD 1112/2018
-                </a>,
-                <a class="hover:text-lavanda-900" href="#">
-                    ADA; Sección 508
-                </a>
+                <a class="hover:text-lavanda-900" href="#"
+                    >UNE-EN 301549:2022; RD 1112/2018</a
+                ><span>, </span><a class="hover:text-lavanda-900" href="#"
+                    >ADA; Sección 508</a
+                >
             </div>
         </div>
         <div class="flex flex-col gap-4 text-lg">
@@ -188,7 +143,7 @@ import QuienEstaObligado from "@/assets/images/Quien-Esta-Obligado.webp";
         <Image src={QuienEstaObligado} alt="¿Quién está obligado?" />
     </div>
 
-    <div class="flex flex-col gap-8 px-8 py-12 bg-[#F7F7F7] text-3xl">
+    <div class="page-content bg-[#F7F7F7] text-3xl">
         <h2 class="font-bold">¿Qué es la accesibilidad digital?</h2>
         <p class="text-lg">
             La accesibilidad digital es un nuevo reto cuyo principal objetivo se
