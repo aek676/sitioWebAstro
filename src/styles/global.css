@@ -41,6 +41,10 @@ footer li {
     @apply flex flex-row items-center justify-start gap-4 w-fit px-4 py-0.5 font-bold uppercase transition-colors border-2 border-transparent bg-white text-black hover:bg-lavanda-100 hover:border-black
 }
 
+.btn-dark {
+    @apply flex flex-row items-center justify-start gap-4 w-fit px-4 py-2 font-bold uppercase transition-colors bg-black border-transparent text-white hover:bg-lavanda-100 hover:text-black
+}
+
 @theme inline {
     --radius-sm: calc(var(--radius) - 4px);
     --radius-md: calc(var(--radius) - 2px);
@@ -149,10 +153,11 @@ footer li {
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+    * {
+        @apply border-border outline-ring/50;
     }
-  body {
-    @apply bg-background text-foreground;
+
+    body {
+        @apply bg-background text-foreground;
     }
 }

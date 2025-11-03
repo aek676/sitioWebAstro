@@ -15,8 +15,13 @@ import {
     DisenoWeb,
     AccesibilidadAplicacionesMoviles,
     DocumentosPDFAccesibles,
+    IconoLegislacion,
+    IconoEficiencia,
+    IconoMercado,
+    IconoResponsabilidad,
 } from "@/assets/images";
 import { CarouselWrapper } from "./CarouselWrapper";
+import DarkButton from "./DarkButton.astro";
 ---
 
 <div>
@@ -223,8 +228,8 @@ import { CarouselWrapper } from "./CarouselWrapper";
     <Image src={QuienEstaObligado} alt="¿Quién está obligado?" />
 </div>
 
-<div class="page-content bg-[#F7F7F7] text-3xl">
-    <h2 class="font-bold">¿Qué es la accesibilidad digital?</h2>
+<div class="page-content bg-[#F7F7F7]">
+    <h2 class="font-bold text-3xl">¿Qué es la accesibilidad digital?</h2>
     <p class="text-lg">
         La accesibilidad digital es un nuevo reto cuyo principal objetivo se
         centra en garantizar que todos los usuarios, independientemente de sus
@@ -235,19 +240,27 @@ import { CarouselWrapper } from "./CarouselWrapper";
     <AccessibilityCard
         title="Amplía tu Mercado"
         text="Accede a un público más amplio mejorando la accesibilidad de tus plataformas."
-        img={ConsultoriaAccesibilidadWeb}
+        img={IconoMercado}
         imgAlt="Icono amplia tu mercado"
     />
     <AccessibilityCard
         title="Eficiencia y Ahorro"
         text="Optimiza tus recursos digitales para hacerlos más eficientes y así reducir costes operativos."
-        img={ConsultoriaAccesibilidadWeb}
+        img={IconoEficiencia}
         imgAlt="Icono eficiencia y ahorro"
     />
     <AccessibilityCard
         title="Compromiso Social"
         text="Demuestra tu compromiso con la inclusión eliminando la temida brecha digital."
-        img={ConsultoriaAccesibilidadWeb}
+        img={IconoResponsabilidad}
         imgAlt="Icono compromiso social"
     />
+    <AccessibilityCard
+        title="Compromiso Legal"
+        text="Asegura que tus plataformas cumplen con la legislación de accesibilidad actual."
+        img={IconoLegislacion}
+        imgAlt="Icono compromiso legal"
+    />
+
+    <DarkButton name="Quiero mas detalles" />
 </div>
